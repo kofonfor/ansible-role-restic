@@ -1,0 +1,3 @@
+restic_cache: /var/lib/docker-extvols/restic/cache
+restic_use_zfs: 0
+restic_zfs_snapshot_name: for-restic-backup

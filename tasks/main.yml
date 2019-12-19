@@ -1,0 +1,8 @@
+- name: ensure the cache exists
+  file: state=directory dest={{ restic_cache }}
+
+- name: put restic bash wrapper
+  template: src=restic.sh dest=/usr/local/bin/restic.sh mode=0700 owner=root
+
+- name: put a cron script
+  template: src=restic dest=/etc/cron.d/restic mode=0644 owner=root
